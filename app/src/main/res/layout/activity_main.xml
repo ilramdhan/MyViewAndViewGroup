@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -21,56 +20,36 @@
                 android:src="@drawable/pixel_google" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+                style="@style/TextContent.BodyMedium.White.MarginAll"
                 android:layout_gravity="bottom"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="16dp"
                 android:background="#4D000000"
                 android:drawablePadding="4dp"
                 android:gravity="center_vertical"
                 android:padding="8dp"
                 android:text="@string/dummy_photos"
-                app:drawableStartCompat="@drawable/ic_collections_white_18dp" />
-
+                android:drawableStart="@drawable/ic_collections_white_18dp" />
         </FrameLayout>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            style="@style/TextContent.HeadlineMedium.Bold"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/dummy_value"
-            android:textSize="32sp" />
+            android:text="@string/dummy_value" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            style="@style/TextContent.TitleMedium.Bold.MarginLeftRight"
             android:layout_marginBottom="16dp"
             android:text="@string/title"
-            android:textStyle="bold" />
+            android:textSize="18sp"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            style="@style/TextContent.BodyMedium.Gray.MarginLeftRight"
             android:layout_marginBottom="16dp"
             android:lineSpacingMultiplier="1"
             android:text="@string/content_text" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            style="@style/TextContent.TitleMedium.Bold.MarginLeftRight"
             android:layout_marginBottom="8dp"
             android:text="@string/specification" />
 
@@ -84,68 +63,81 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp" >
+                android:layout_marginBottom="8dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="14sp"
+                    style="@style/TextContent.BodyMedium.Bold"
                     android:layout_marginEnd="16dp"
                     android:text="@string/display" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="14sp"
+                    style="@style/TextContent.BodyMedium.Gray"
                     android:layout_weight="1"
                     android:text="@string/content_specs_display" />
-
             </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:textSize="14sp"
-                android:text="@string/size" />
-
-            <TextView
+            <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="14sp"
-                android:text="@string/content_specs_size" />
+                android:layout_marginBottom="8dp">
 
-        </TableRow>
+                <TextView
+                    style="@style/TextContent.BodyMedium.Bold"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/size" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp">
+                <TextView
+                    style="@style/TextContent.BodyMedium.Gray"
+                    android:layout_weight="1"
+                    android:text="@string/content_specs_size" />
+            </TableRow>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:textSize="14sp"
-                android:text="@string/battery" />
-
-            <TextView
+            <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="14sp"
-                android:text="@string/content_specs_battery" />
+                android:layout_marginBottom="8dp">
 
-        </TableRow>
+                <TextView
+                    style="@style/TextContent.BodyMedium.Bold"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/battery" />
+
+                <TextView
+                    style="@style/TextContent.BodyMedium.Gray"
+                    android:layout_weight="1"
+                    android:text="@string/content_specs_battery" />
+            </TableRow>
         </TableLayout>
 
+        <TextView
+            style="@style/TextContent.TitleMedium.Bold.MarginLeftRight"
+            android:layout_marginBottom="8dp"
+            android:text="@string/seller" />
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/photo_2" />
+
+            <TextView
+                style="@style/TextContent.BodyMedium.Gray"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/profile_image"
+                android:text="@string/my_name" />
+        </RelativeLayout>
+
+        <Button
+            style="@style/ButtonGeneral.SecondaryVariant"
+            android:text="@string/buy" />
     </LinearLayout>
-
 </ScrollView>
